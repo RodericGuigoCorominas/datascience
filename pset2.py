@@ -6,7 +6,7 @@
       "name": "pset2.py",
       "provenance": [],
       "collapsed_sections": [],
-      "authorship_tag": "ABX9TyMaGtnwiKCplLYfoMtjFKrp",
+      "authorship_tag": "ABX9TyMesRssz4skTykId0NvYhNM",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -120,17 +120,16 @@
         "            print(a)\n",
         "        if a==0:\n",
         "            print('zerooo')\n",
-        "zerooo(a1)\n",
-        "print(a2)"
+        "zerooo(a1)"
       ],
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
         "id": "pCTii0kBNJ6u",
-        "outputId": "63b4381a-ac8a-4cf5-c453-acf6ce5e96d9"
+        "outputId": "6c87d365-8d74-4cb5-9e67-763a57e68863"
       },
-      "execution_count": 94,
+      "execution_count": 95,
       "outputs": [
         {
           "output_type": "stream",
@@ -144,8 +143,7 @@
             "6\n",
             "zerooo\n",
             "1\n",
-            "zerooo\n",
-            "[6, 1, 7]\n"
+            "zerooo\n"
           ]
         }
       ]
