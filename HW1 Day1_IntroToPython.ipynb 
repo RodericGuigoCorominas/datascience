@@ -1,0 +1,724 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Day1_IntroToPython.ipynb",
+      "provenance": [],
+      "collapsed_sections": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/LPalmer23/datascience/blob/main/HW1%20Day1_IntroToPython.ipynb%20\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# An introduction to Python\n",
+        "In this course, we will be mostly using Python to solve equations, analyse data and run simulations. You can think of it as a calculator that allows us to perform a wide range of things. For this reason, you'll have to learn the appropriate syntax, that is, how to type the instructions so that the computer can appropriately interpret them.\n",
+        "\n",
+        "Today, we will start with an introduction to Python using iPython notebooks. There are a few basics you need to know:\n",
+        "\n",
+        "*   The code, that is, your instructions, is written in \"cells\" or \"blocks\". Each cell will contain a certain number of instructions. You can create a new code cell by clicking on **+ Code** or a text cell (like this one) by clicking on **+ Text**.\n",
+        "*   To execute the instructions in a code cell you must \"run\" the cell. If you do that, all the instructions in a single cell will be executed. In order to run a cell, you must click the ▶ button on the left of the cell, or press **Shift+Enter**.\n",
+        "*   All the lines in a code cell will be interpreted as Python instructions, with one exception! Any line starting with a hash # will be ignored. You can use that to write explanatory notes about your code. \n",
+        "\n",
+        "We will now walk you through some of the basics of Python notebooks. \n",
+        "The easiest way you can use cells is as a calculator (make sure you remember the order of operations). After running the cell, you should be able to see the result of the calculation right below."
+      ],
+      "metadata": {
+        "id": "IpVpWCDor5zm"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "6lR3nvkOiRjc",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "578d87e9-71b8-4eed-dc00-4ce7344ff66b"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "1"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 1
+        }
+      ],
+      "source": [
+        "2 * 5 - 9"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "If you write more than one operation in a cell, you'll only be able to see the result of the last operation."
+      ],
+      "metadata": {
+        "id": "SWqKUlPAOZ61"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "3 - 9 / 6\n",
+        "10 / 4"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "FyK6xmj4OgsS",
+        "outputId": "ffb254a0-70be-4527-a244-3b8d26275ab7"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "2.5"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 2
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "The first and most important command you need to know is `print`. It takes in any number of inputs, and prints them out on one line of text:"
+      ],
+      "metadata": {
+        "id": "7yAlcSy2NpTz"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# this line is just a comment, so the computer ignores it \n",
+        "# the line below prints a sentence\n",
+        "print(\"Hello World! Here is some code.\")\n",
+        "\n",
+        "# the line below prints the result of 2 + 2 * 3\n",
+        "print(2 + 2 * 3)"
+      ],
+      "metadata": {
+        "id": "gshS2spRNwZO",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "7c402bf3-b4ac-4bed-e0e8-38ed0e2dd185"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hello World! Here is some code.\n",
+            "8\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Variables and Operations"
+      ],
+      "metadata": {
+        "id": "I8boJIiSwms8"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Variables are \"containers\" for storing data values. Think of a variable as a name attached to a particular object. In Python, variables need not be declared or defined in advance, as is the case in many other programming languages. To create a variable, you just assign it a value and then start using it."
+      ],
+      "metadata": {
+        "id": "5F8fpo5KQH2V"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# assign to a the value 1\n",
+        "a = 1\n",
+        "# assign to b the value 2\n",
+        "b = 2\n",
+        "# assign to c the value of a + b\n",
+        "c = a + b\n",
+        "# print the values of a, b and c\n",
+        "print('a =',a,' b =',b,' c =',c)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tcjtQ0oqwjE4",
+        "outputId": "f4f0e541-2bb6-4007-fd96-dad2e8f6cb9c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "a = 1  b = 2  c = 3\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Variables have types: a word and a number are not the same. To see more information about what is stored in a variable, you can use the built-in `type()` function:"
+      ],
+      "metadata": {
+        "id": "eadyl4MUQgPx"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# example of a string\n",
+        "ex_str = \"hello\"\n",
+        "# example of an integer\n",
+        "ex_int = 2\n",
+        "# example of a decimal number\n",
+        "ex_float = 2.5\n",
+        "# example of a boolean (true or false) value\n",
+        "ex_bool = True\n",
+        "# example of a list of values \n",
+        "ex_list = [1, 2, 3, \"four\", False]\n",
+        "\n",
+        "# print on the screen these values and their types\n",
+        "print(ex_str,\" is a string\", type(ex_str))\n",
+        "print(ex_int,\" is an integer \", type(ex_int))\n",
+        "print(ex_float,\" is a float\", type(ex_float))\n",
+        "print(ex_bool,\" is a boolean\", type(ex_bool))\n",
+        "print(ex_list,\" is a list\", type(ex_list))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "m0Lo1SdW2BnR",
+        "outputId": "a494e7ff-8024-4689-c635-d262cee24128"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "hello  is a string <class 'str'>\n",
+            "2  is an integer  <class 'int'>\n",
+            "2.5  is a float <class 'float'>\n",
+            "True  is a boolean <class 'bool'>\n",
+            "[1, 2, 3, 'four', False]  is a list <class 'list'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Libraries\n",
+        "A library is a collection of codes that can be used later on in a program for some specific well-defined operations. It is important to know that Python doesn't automatically load all existing functions in the world, so in order to allow Python to use certain functions, one must load the corresponding library. Python libraries play a very vital role in fields of Machine Learning, Data Science, Data Visualization, etc.\n",
+        "\n",
+        "*   To import a library, use the syntax `import library`\n",
+        "*   You can give an alias to the library to simplify the code. To do so, use `import library as alias`\n",
+        "\n",
+        "Here are some libraries we will be using today\n",
+        "\n",
+        "*   **Math** is a module that provides access to the mathematical functions\n",
+        "*   **NumPy** is a Python library used for working with arrays. It also has functions for working in domain of linear algebra, fourier transform, and matrices: `import numpy as np`\n",
+        "*   **SymPy** is a Python library for symbolic mathematics. We will use an alias again: `import sympy as sp`\n",
+        "\n",
+        "When using functions in libraries, they have to be preceeded by the library name:"
+      ],
+      "metadata": {
+        "id": "sjHHR8gbwsVo"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# import math operations library \"math\"\n",
+        "import math\n",
+        "print(math.log(10))\n",
+        "print(math.tanh(9))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4bPj3aOHCrHU",
+        "outputId": "eaf82873-2b3b-4a4d-f135-b4cb88894762"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2.302585092994046\n",
+            "0.999999969540041\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Vectors and Matrices\n",
+        "Vectors in Python can be represented as lists using square brackets `[]`. For example, the vector \n",
+        "$$v_1=\\begin{bmatrix} 1\\\\ 2 \\\\ 3 \\end{bmatrix}$$ \n",
+        "can be defined as `v1 = [1, 2, 3]`. However, this is not the only or best way to represent a vector in Python. Instead, it will be more convenient to declare it as a NumPy array; to do so we write `v2 = np.array([1, 2, 3])`. \n",
+        "\n",
+        "Similarly, a matrix is represented as a vector of vectors. For example, the matrix\n",
+        "$$v_1=\\begin{bmatrix} 1 & 0 & 3\\\\ 1 & 2 & 0 \\\\ 0 & 3 & 1 \\end{bmatrix}$$\n",
+        "can be represented as a NumPy array `m = np.array([[1, 0, 3],[1, 2, 0],[0, 3, 1]])`."
+      ],
+      "metadata": {
+        "id": "_2N4cf8YJJeo"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# this is a the vector (1, 2, 3)\n",
+        "v1 = [1, 2, 3]\n",
+        "\n",
+        "# import numpy library and call it \"np\"\n",
+        "import numpy as np\n",
+        "\n",
+        "# the same vector as v1, but now as a numpy array\n",
+        "v2 = np.array([1, 2, 3])\n",
+        "\n",
+        "# this is a matrix\n",
+        "m = np.array([[1, 0, 3],[1, 2, 0],[0, 3, 1]])\n",
+        "\n",
+        "print(v1)\n",
+        "print(v2)\n",
+        "print(m)"
+      ],
+      "metadata": {
+        "id": "eKNH6zRHJQ8Z",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "e423d188-a35c-4edd-8112-2379489e521f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, 3]\n",
+            "[1 2 3]\n",
+            "[[1 0 3]\n",
+            " [1 2 0]\n",
+            " [0 3 1]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Lists can be accessed at specific indices, sliced and modified in many different ways. To access values in lists, use the square brackets for slicing along with the index or indices to obtain value available at that index. Note that in Python, the **indexing starts at 0**. For example:"
+      ],
+      "metadata": {
+        "id": "eF70OxLdpPU9"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# access the first element in v2\n",
+        "print(v2[0])\n",
+        "\n",
+        "# slice from positions 0 - 1 in v2\n",
+        "print(v2[0:2])\n",
+        "\n",
+        "# element in second row and third colum in m\n",
+        "print(m[1,2])"
+      ],
+      "metadata": {
+        "id": "j7LCghnNpTVr",
+        "outputId": "318beee8-91f7-46c3-d3f2-fb16367b5f66",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "[1 2]\n",
+            "0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "You can update single or multiple elements of lists by giving the slice on the left-hand side of the assignment operator."
+      ],
+      "metadata": {
+        "id": "mZuD5J_ETGXR"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(v2)\n",
+        "v2[2] = 10\n",
+        "print(\"New value available at index 2 : \")\n",
+        "print(v2)"
+      ],
+      "metadata": {
+        "id": "HTNC_AxLTHfn",
+        "outputId": "35ae0eed-6f86-4da7-b656-de2d8308a924",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1 2 3]\n",
+            "New value available at index 2 : \n",
+            "[ 1  2 10]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "NumPy arrays allow to perform mathematical operations such as addition/substraction, matrix multiplication, dot product, etc. That is not possible with regular Python lists. "
+      ],
+      "metadata": {
+        "id": "ZjLONAN5rX8g"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "u1 = np.array([1, 2, 3])\n",
+        "u2 = np.array([4, 5, 6])\n",
+        "m1 = np.array([[3, 2, 1],[0, 1, 3]])\n",
+        "# addition/substraction\n",
+        "print(u1 + u2)\n",
+        "print(u1 - u2)\n",
+        "\n",
+        "# multiplication by scalar\n",
+        "print(3 * u1)\n",
+        "\n",
+        "# dot product\n",
+        "print(np.dot(u1, u2))\n",
+        "\n",
+        "# matrix times vector\n",
+        "print(np.matmul(m1, u1))\n",
+        "print(np.matmul(m1, u2))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "qwxGAvU6rWpF",
+        "outputId": "5ca10a80-64c0-4b3a-fefa-51d7fdb52255"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[5 7 9]\n",
+            "[-3 -3 -3]\n",
+            "[3 6 9]\n",
+            "32\n",
+            "[10 11]\n",
+            "[28 23]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Today's Application: Solving Linear Systems\n",
+        "Here we will show two ways of solving linear systems in Python using two different libraries: **NumPy** and **SymPy**. Each library has advantatges and disatvantages.\n",
+        "\n",
+        "As our first example, let's take a look at the following system:\n",
+        "$$\\begin{cases}2x+y=9 \\\\ x+3y=2\\end{cases}$$"
+      ],
+      "metadata": {
+        "id": "Lok_dtpftnpj"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# using NumPy\n",
+        "import numpy as np\n",
+        "\n",
+        "# we use the variables m, b to represent the system mx = b, and r the result\n",
+        "m = np.array([[2,1],[1,3]])\n",
+        "b = np.array([9,2])\n",
+        "\n",
+        "# we use the built-in NumPy function linalg.solve()\n",
+        "r = np.linalg.solve(m, b)\n",
+        "print(r)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-dAraibluNcD",
+        "outputId": "914a0cbe-33da-42b5-d118-6da14126caba"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[ 5. -1.]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Using SymPy\n",
+        "import sympy as sp\n",
+        "\n",
+        "# the syntax is different here. We first must tell the computer the symbols we are using as variables. \n",
+        "x, y = sp.symbols('x,y')\n",
+        "\n",
+        "# here we use the built-in SymPy function solve()\n",
+        "r = sp.solve([2*x + y - 9, x + 3*y - 2])\n",
+        "print(r)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "oYCQEtlvuvRe",
+        "outputId": "f4f55a92-ea58-4737-a1d9-37f71648af5d"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{x: 5, y: -1}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Let's look at another example:\n",
+        "$$\\begin{cases}3x+y=9 \\\\ 6x+2y=18\\end{cases}$$\n",
+        "In this case, it is not hard to check that the system has infinitely many solutions. You can easily see that the second equation is just twice the first one. If we attempt to solve it using NumPy, it will produce an error. SymPy, instead, will give you an answer with $x$ in terms of $y$, indicating that there isn't a unique solution. "
+      ],
+      "metadata": {
+        "id": "xiDFP4FMuSBW"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# since we already loaded the libraries, we don't need to import again\n",
+        "# using NumPy\n",
+        "m = np.array([[3,1],[6,2]])\n",
+        "b = np.array([9,18])\n",
+        "r = np.linalg.solve(m, b)\n",
+        "print(r)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 242
+        },
+        "id": "uQgzhYJGuYH7",
+        "outputId": "6fd2cef8-89f2-46ac-d11c-29ede1e85dd6"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "NameError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-2-68f5c765c978>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[0;31m# since we already loaded the libraries, we don't need to import again\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      2\u001b[0m \u001b[0;31m# using NumPy\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 3\u001b[0;31m \u001b[0mm\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mnp\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0marray\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;36m3\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;36m1\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;36m6\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;36m2\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      4\u001b[0m \u001b[0mb\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mnp\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0marray\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;36m9\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;36m18\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      5\u001b[0m \u001b[0mr\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mnp\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mlinalg\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0msolve\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mm\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mb\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mNameError\u001b[0m: name 'np' is not defined"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# using SymPy.\n",
+        "r = sp.solve([3*x + y - 9, 6*x + 2*y - 18])\n",
+        "print(r)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 206
+        },
+        "id": "GKZ5tv-IwPFL",
+        "outputId": "6ceabe7f-61ef-4d0a-82d4-e2c704ba0377"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "NameError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-1-9388d2338282>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[0;31m# using SymPy.\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 2\u001b[0;31m \u001b[0mr\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0msp\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0msolve\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;36m3\u001b[0m\u001b[0;34m*\u001b[0m\u001b[0mx\u001b[0m \u001b[0;34m+\u001b[0m \u001b[0my\u001b[0m \u001b[0;34m-\u001b[0m \u001b[0;36m9\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;36m6\u001b[0m\u001b[0;34m*\u001b[0m\u001b[0mx\u001b[0m \u001b[0;34m+\u001b[0m \u001b[0;36m2\u001b[0m\u001b[0;34m*\u001b[0m\u001b[0my\u001b[0m \u001b[0;34m-\u001b[0m \u001b[0;36m18\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      3\u001b[0m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mr\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mNameError\u001b[0m: name 'sp' is not defined"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Homework\n",
+        "Some of the homework problems require you to solve linear systems. You may use the cells below to do that. Here are some tips:\n",
+        "*   When using `SymPy`, make sure you define all the symbolic variables you need. You can use x1, x2, x3, etc. instead of x, y, z, etc., so that you don't run out of symbols. \n",
+        "*   Make sure that your variables storing the values of the matrix and solution are defined as needed before running the solving functions."
+      ],
+      "metadata": {
+        "id": "M6vWhpbysz83"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Use this cell for calculations\n",
+        "\n",
+        "# Using SymPy\n",
+        "import sympy as sp\n",
+        "\n",
+        "# tell the computer the symbols we are using as variables. \n",
+        "x, y, z = sp.symbols('x,y, z')\n",
+        "\n",
+        "# use the built-in SymPy function solve()\n",
+        "r = sp.solve([x + 2*y + 5*z -1, x*-1 + 3*y +7*z - 0, 5*y + 12*z - 1])\n",
+        "print(r)"
+      ],
+      "metadata": {
+        "id": "p3-X0CoRs3HS",
+        "outputId": "5d683aec-bcb8-4876-ce19-520a3aac2cf9",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{x: 3/5 - z/5, y: 1/5 - 12*z/5}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Use this cell for calculations\n",
+        "\n",
+        "# Using SymPy\n",
+        "import sympy as sp\n",
+        "\n",
+        "# tell the computer the symbols we are using as variables. \n",
+        "x1, x2, x3, x4, x5, x6, x7, x8 = sp.symbols('x1, x2, x3, x4, x5, x6, x7, x8')\n",
+        "\n",
+        "# use the built-in SymPy function solve()\n",
+        "r = sp.solve([x1 - 1/3*x7, x2 - 1/2*x1 - 1/2*x3 - 1/3*x4, x3 - 1/2*x1, x4 - x2, x5 - 1/2*x3 - 1/3*x4 - 1/3*x7, x6 - 1/3*x4 - 1/3*x5 - 1/2*x8, x7 - 1/3*x5 - 1/2*x8, x8 - x6 - 1/3*x5 - 1/3*x7])\n",
+        "print(r)"
+      ],
+      "metadata": {
+        "id": "unbzKNOQwdhS",
+        "outputId": "214007bb-3841-46ab-a85a-3ef9462778a9",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{x1: 0.203389830508475*x8, x2: 0.228813559322034*x8, x3: 0.101694915254237*x8, x4: 0.228813559322034*x8, x5: 0.330508474576271*x8, x6: 0.686440677966102*x8, x7: 0.610169491525424*x8}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Use this cell for calculations"
+      ],
+      "metadata": {
+        "id": "iwFjsxV1tPWO"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
